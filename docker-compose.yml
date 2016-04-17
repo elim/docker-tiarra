@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  tiarra:
+    build: .
+    ports:
+      - 6667:6667
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ~/.tiarra:/srv/tiarra
+    restart: always
