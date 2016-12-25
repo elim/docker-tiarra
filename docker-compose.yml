@@ -1,11 +1,12 @@
 version: '2'
 
 services:
-  tiarra:
-    build: .
+  app:
+    image: elim/tiarra:0.0.2
     ports:
       - 6667:6667
+    restart: always
+    user: $UID
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ~/.tiarra:/srv/tiarra
-    restart: always
+      - ~/.tiarra:/var/tiarra

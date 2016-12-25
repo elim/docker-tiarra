@@ -12,7 +12,7 @@
 
 ## Usage
 
-    docker-compose up -d
+    UID=$(id -u) docker-compose up -d
 
 ## Caution
 
